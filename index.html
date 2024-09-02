@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nombre del Fotógrafo - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <em>Modo Oscuro</em>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio">
+        <h1>Nombre del Fotógrafo</h1>
+        <p class="subtitle-desc">Capturando momentos, Creando recuerdos</p>
+      </section>
+
+      <section id="galeria">
+        <h2>Galería</h2>
+        <div class="grid-gallery">
+          <div class="gallery-item">
+            <img src="img/rocas y mar.jpg" alt="Imagen 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/edificios y lago.jpg" alt="Imagen 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/bicicleta.jpg" alt="Imagen 3" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/calles.jpg" alt="Imagen 4" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/mujer-modelo.jpg" alt="Imagen 5" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/cielo.jpg" alt="Imagen 6" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/bosque.jpg" alt="Imagen 7" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/paisaje-rio.jpg" alt="Imagen 8" />
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <img
+          src="/img/perfil-fotografo.avif"
+          alt="Foto del fotógrafo"
+          class="profile-img"
+        />
+        <p class="sobre-mi-desc">
+          Soy un fotógrafo apasionado por capturar la belleza en lo cotidiano.
+          Con más de 10 años de experiencia, me especializo en retratos,
+          paisajes y fotografía de eventos. Mi objetivo es crear imágenes que
+          cuenten historias y evoquen emociones. Inicié en la fotografía como un
+          hobby y rápidamente se convirtió en mi pasión. Me encanta experimentar
+          con diferentes estilos y técnicas para crear imágenes únicas y
+          memorables. la fotografía me ha permitido explorar mi creatividad y
+          conectarme con personas de todo el mundo. siempre estoy buscando
+          nuevas oportunidades para crecer y aprender en este campo en constante
+          evolución.
+        </p>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+          <input type="text" placeholder="Nombre" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Nombre del Fotógrafo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
