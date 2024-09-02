@@ -60,9 +60,56 @@ function setupThemeSwitch() {
   }
 }
 
+function setupLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const caption = document.getElementById("caption");
+  const close = document.querySelector(".close");
+  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next");
+  const galleryItems = document.querySelectorAll(".gallery-item img");
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    lightbox.classList.add("active");
+    lightboxImg.src = galleryItems[index].src;
+    caption.textContent = galleryItems[index].alt;
+    currentIndex = index;
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+  }
+
+  function navigateLightbox(direction) {
+    currentIndex =
+      (currentIndex + direction + galleryItems.length) % galleryItems.length;
+    openLightbox(currentIndex);
+  }
+
+  galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => openLightbox(index));
+  });
+
+  close.addEventListener("click", closeLightbox);
+  prev.addEventListener("click", () => navigateLightbox(-1));
+  next.addEventListener("click", () => navigateLightbox(1));
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+}
+
+// Asegúrate de llamar a esta función cuando el DOM esté listo
+document.addEventListener("DOMContentLoaded", setupLightbox);
+
 // Inicialización
 document.addEventListener("DOMContentLoaded", () => {
   animateOnScroll();
   smoothScroll();
   setupThemeSwitch();
+  setupMobileMenu();
+  setupLightbox();
 });
