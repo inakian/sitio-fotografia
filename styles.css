@@ -249,7 +249,7 @@ footer {
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: inherit;
   right: 20px;
   top: 20px;
 }
