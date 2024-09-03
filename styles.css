@@ -281,6 +281,16 @@ footer {
   padding: 1rem;
 }
 
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  transition: all 0.3s ease;
+  color: rgb(153, 85, 218);
+}
+
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
