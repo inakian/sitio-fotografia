@@ -102,7 +102,6 @@ function setupLightbox() {
   });
 }
 
-// Asegúrate de llamar a esta función cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", setupLightbox);
 
 // Inicialización
